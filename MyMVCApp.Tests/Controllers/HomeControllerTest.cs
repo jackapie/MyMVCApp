@@ -35,7 +35,8 @@ namespace MyMVCApp.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNotNull(result.Model);
+           
         }
 
         [TestMethod]
@@ -48,7 +49,7 @@ namespace MyMVCApp.Tests.Controllers
             ViewResult result = controller.Contact() as ViewResult;
 
             // Assert
-            Assert.IsNotNull(result);
+            Assert.AreEqual("Your contact page.", result.ViewBag.Message);
         }
     }
 }

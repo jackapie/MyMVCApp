@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMVCApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +16,11 @@ namespace MyMVCApp.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var model = new AboutModel();
+            model.Name = "Jackie";
+            model.Location = "Norwich, UK";
 
-            return View();
+            return View(model);
         }
 
         public ActionResult Contact()
