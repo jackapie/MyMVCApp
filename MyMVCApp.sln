@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMVCApp", "MyMVCApp\MyMVCApp.csproj", "{858F04B3-3A02-48B7-A7EE-726B7AC01AA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMVCApp.Tests", "MyMVCApp.Tests\MyMVCApp.Tests.csproj", "{4D76F1CC-C055-49EB-8CFD-46943441B27B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{858F04B3-3A02-48B7-A7EE-726B7AC01AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858F04B3-3A02-48B7-A7EE-726B7AC01AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858F04B3-3A02-48B7-A7EE-726B7AC01AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858F04B3-3A02-48B7-A7EE-726B7AC01AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D76F1CC-C055-49EB-8CFD-46943441B27B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D76F1CC-C055-49EB-8CFD-46943441B27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D76F1CC-C055-49EB-8CFD-46943441B27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D76F1CC-C055-49EB-8CFD-46943441B27B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AB0397C-92F5-47F3-BFAB-B4C0FAFE7577}
+	EndGlobalSection
+EndGlobal
