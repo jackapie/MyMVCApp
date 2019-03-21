@@ -15,7 +15,7 @@ namespace MyMVCApp
 
             routes.MapRoute("Cuisine",
                 "cuisine/{name}",
-                new { controller = "Cuisine", action = "Search", name = "" }
+                new { controller = "Cuisine", action = "Search", name = UrlParameter.Optional }
                 );
 
             routes.MapRoute(

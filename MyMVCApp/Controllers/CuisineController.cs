@@ -9,9 +9,10 @@ namespace MyMVCApp.Controllers
     public class CuisineController : Controller
     {
         // GET: Cuisine
-        public ActionResult Search()
+        public ActionResult Search(string name = "French")
         {
-            return Content("Hello!");
+            var message = Server.HtmlEncode(name);
+            return Content(message);
         }
     }
 }
