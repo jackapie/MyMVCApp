@@ -9,16 +9,12 @@ namespace MyMVCApp.Controllers
 {
     public class HomeController : Controller
     {
+        MyMVCAppDb _db = new MyMVCAppDb();
+
         public ActionResult Index()
         {
-            var controller = RouteData.Values["controller"];
-            var action = RouteData.Values["action"];
-            var id = RouteData.Values["id"];
-
-            var message = $"{controller}::{action} {id}";
-            ViewBag.Message = message;
-
-            return View();
+            var model = _db.Restaurants.ToList();
+            return View(model);
         }
 
         public ActionResult About()
@@ -35,6 +31,15 @@ namespace MyMVCApp.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if(_db != null)
+            {
+                _db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
