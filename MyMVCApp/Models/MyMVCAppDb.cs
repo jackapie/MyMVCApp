@@ -8,6 +8,10 @@ namespace MyMVCApp.Models
 {
     public class MyMVCAppDb : DbContext
     {
+        public MyMVCAppDb():base("name=DefaultConnection")
+        {
+
+        }
 
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<RestaurantReview> Reviews { get; set; }
