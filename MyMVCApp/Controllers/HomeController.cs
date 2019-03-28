@@ -11,7 +11,7 @@ namespace MyMVCApp.Controllers
     {
         MyMVCAppDb _db = new MyMVCAppDb();
 
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm = null)
         {
             //var model = from r in _db.Restaurants
             //            orderby r.Reviews.Average(review => review.Rating) descending
@@ -26,6 +26,7 @@ namespace MyMVCApp.Controllers
             var model =
                 _db.Restaurants
                 .OrderByDescending(r => r.Reviews.Average(review => review.Rating))
+                .Where(r => searchTerm == null || r.Name.StartsWith(searchTerm))
                 .Take(10)
                 .Select(r => new RestaurantListViewModel
                 {
