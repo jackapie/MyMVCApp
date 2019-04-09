@@ -10,8 +10,7 @@ namespace MyMVCApp.Controllers
     public class ReviewsController : Controller
     {
         MyMVCAppDb _db = new MyMVCAppDb();
-        
-        // GET: Reviews
+       
         public ActionResult Index([Bind(Prefix="id")] int restaurantId)
         {
             var restaurant = _db.Restaurants.Find(restaurantId);
@@ -21,6 +20,12 @@ namespace MyMVCApp.Controllers
             }
 
             return HttpNotFound();
+        }
+
+        [HttpGet]
+        public ActionResult Create(int restaurantId)
+        {
+            return View();
         }
 
         protected override void Dispose(bool disposing)
