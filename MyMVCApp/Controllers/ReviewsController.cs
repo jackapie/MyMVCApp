@@ -40,6 +40,13 @@ namespace MyMVCApp.Controllers
             return View(review);
         }
 
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var model = _db.Reviews.Find(id);
+            return View(model);
+        }
+
         protected override void Dispose(bool disposing)
         {
             _db.Dispose();
