@@ -1,0 +1,17 @@
+﻿@model MyMVCApp.Models.Restaurant
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reviews for @Model.Name</h2>
+
+<div>
+    @Html.Partial("_Reviews", Model.Reviews)
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
