@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MyMVCApp.Models
 {   
-    public class RestaurantReview
+    public class RestaurantReview : IValidatableObject
     {
         public int Id { get; set; }
 
@@ -23,5 +23,12 @@ namespace MyMVCApp.Models
         public string ReviewerName { get; set; }
         public int RestaurantId { get; set; }
 
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if(Rating < 2 && ReviewerName.ToLower().StartsWith("jackie"))
+            {
+                yield return new ValidationResult("Sorry, Jackie, you can't do this");
+            }
+        }
     }
 }
