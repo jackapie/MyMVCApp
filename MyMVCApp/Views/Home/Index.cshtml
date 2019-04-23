@@ -6,13 +6,16 @@
 <form method="get" action="@Url.Action("Index")"
       data-otf-ajax="true" data-otf-target="#restaurantList">
 
-    <input type="search" name="searchTerm" />
+    <input type="search" name="searchTerm" data-otf-autocomplete="@Url.Action("Autocomplete")" />
+    <br />
     <input type="submit" value="Search By Name" />
 </form>
 
 
+<div>
+    @Html.Partial("_Restaurants", Model)
+</div>
 
-@Html.Partial("_Restaurants", Model)
 
 
 
