@@ -32,7 +32,10 @@
     </div>
     <div class="container body-content">
         @RenderSection("featured", false)
-        @RenderBody()
+        <section class="body-section">
+            @RenderBody()
+        </section>
+        
         
         <hr />
         <footer>
