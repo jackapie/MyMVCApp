@@ -38,6 +38,7 @@ $(function () {
         var $a = $(this);
         var options = {
             url: $a.attr("href"),
+            data:$("form").serialize(),
             type: "get"
         };
         $.ajax(options).done(function (data) {
