@@ -29,11 +29,7 @@ $(function () {
         var $input = $(this);
         var options = {
             source: $input.attr("data-otf-autocomplete"),
-            select: submitAutocompleteForm,
-            open: function () {
-                $('.ui-autocomplete').width('auto');
-                $('.ui-widget-content').css('background', '#E1F7DE');
-            }
+            select: submitAutocompleteForm
         };
         $input.autocomplete(options);
     };
